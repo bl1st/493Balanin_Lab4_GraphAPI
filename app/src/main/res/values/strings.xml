@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">493Balanin_Lab4_GraphAPI</string>
+
+    <string name="tv_authorize">Authorization</string>
+    <string name="tv_username">Username:</string>
+    <string name="tv_password">Password:</string>
+    <string name="btn_authorize">Autrorize</string>
+    <string name="btn_register">Register</string>
+
+</resources>
