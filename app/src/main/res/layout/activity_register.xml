@@ -10,10 +10,10 @@
     tools:context=".RegisterActivity">
 
     <TextView
-        android:id="@+id/tv_authorization"
+        android:id="@+id/tv_registration"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/tv_authorize"
+        android:text="@string/tv_registration"
         android:textAlignment="center"
         android:textColor="@color/teal_200"
         android:textSize="24sp" />
@@ -77,6 +77,7 @@
             android:layout_width="150dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:onClick="onButtonRegister_Click"
             android:text="@string/btn_register" />
     </LinearLayout>
 

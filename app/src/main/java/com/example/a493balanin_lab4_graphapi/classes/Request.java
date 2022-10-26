@@ -1,29 +1,31 @@
-package com.example.a493balanin_lab4_graphapi;
+package com.example.a493balanin_lab4_graphapi.classes;
 
 import android.app.Activity;
-import android.widget.Toast;
+import android.content.Context;
+import android.util.Log;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
+import java.net.ProtocolException;
 import java.net.URL;
 
 public class Request {
 
-    String base = "http://89.108.78.244:5000";
-
-    public void onSuccess(String res) throws Exception
-    {
+    final String base = "http://nodegraph.spbcoit.ru:5000";
 
 
-    }
-    public void onFail()
+    public void onSuccess(String res, Context ctx) throws Exception
     {
 
     }
+    public void onFail(Context ctx)
+    {
 
+    }
+    //493 Balanin
     public void send (Activity ctx, String method, String request)
     {
         Runnable r = new Runnable()
@@ -31,12 +33,13 @@ public class Request {
 
             @Override
             public void run() {
-
                 try
                 {
                     URL url = new URL(base + request);
+
                     HttpURLConnection con = (HttpURLConnection) url.openConnection();
                     con.setRequestMethod(method);
+
 
                     InputStream is = con.getInputStream();
                     BufferedInputStream inp = new BufferedInputStream(is);
@@ -57,20 +60,27 @@ public class Request {
 
                     ctx.runOnUiThread(() ->
                     {
-                        try { onSuccess(res); } catch (Exception e){  }
+                        try { onSuccess(res,ctx); } catch (Exception e){  }
                     });
 
-                } catch (Exception ex)
-                {
-                    ctx.runOnUiThread(() ->
-                    {
-                     Toast t = Toast.makeText(ctx,"Reques failed!",Toast.LENGTH_SHORT);
-                     t.show();
-                     onFail();
-                    });
-
+                } catch (ProtocolException e) {
+                    e.printStackTrace();
+                    Log.e("LINK",base + request);
+                    e.printStackTrace();
+                } catch (MalformedURLException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
-
+                /*
+                catch (Exception ex)
+               {
+                   ctx.runOnUiThread(() ->
+                   {
+                       onFail(ctx);
+                   });
+               }
+*/
 
             }
         };

@@ -1,10 +1,15 @@
 <resources>
     <string name="app_name">493Balanin_Lab4_GraphAPI</string>
 
-    <string name="tv_authorize">Authorization</string>
+    <string name="tv_authorize">Authorization Balanin 493</string>
     <string name="tv_username">Username:</string>
     <string name="tv_password">Password:</string>
-    <string name="btn_authorize">Autrorize</string>
+    <string name="btn_authorize">Authorize</string>
     <string name="btn_register">Register</string>
+    <string name="tv_registration">User registration Balanin 493</string>
+    <string name="btn_createGraph">Create</string>
+    <string name="tv_GraphName">Graph name:</string>
+    <string name="graph_add">Create new graph</string>
+    <string name="DB_NAME">Graphs.db</string>
 
 </resources>

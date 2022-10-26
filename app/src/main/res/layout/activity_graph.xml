@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GraphActivity">
+
+    <LinearLayout
+        android:layout_width="315dp"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <com.example.a493balanin_lab4_graphapi.classes.GraphView
+            android:id="@+id/graphView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="bottom|center"
+                android:layout_weight="1"
+                android:foregroundGravity="bottom|center"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"></LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btn_AddNode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onButtonAddNode_Click"
+                app:srcCompat="@drawable/plus" />
+
+            <ImageButton
+                android:id="@+id/btn_RemoveNode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onButtonRemoveNode_Click"
+                app:srcCompat="@drawable/minus" />
+
+            <ImageButton
+                android:id="@+id/btn_LinkNodes"
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:onClick="onButtonLinkNodes_Click"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/link_nodes" />
+
+            <Button
+                android:id="@+id/btn_RenameNode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onButtonRenameNode_Click"
+                android:text="rename node" />
+
+            <Button
+                android:id="@+id/btn_ChangeLinkValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onButtonChangeLinkValue_Click"
+                android:text="link value" />
+
+            <Button
+                android:id="@+id/btn_RenameGraph"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:layout_weight="1"
+                android:gravity="bottom|center"
+                android:onClick="button_RenameGraph_Click"
+                android:text="Rename graph" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

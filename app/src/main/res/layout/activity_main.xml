@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/tv_authorization"
+        android:id="@+id/tv_registration"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/tv_authorize"
@@ -94,6 +94,14 @@
             android:layout_weight="1"
             android:onClick="onButtonRegister_Click"
             android:text="@string/btn_register" />
+
     </LinearLayout>
+
+    <RadioButton
+        android:id="@+id/rb_saveUser"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="Remember me" />
 
 </LinearLayout>
